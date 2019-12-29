@@ -3,7 +3,7 @@ DeepLearning_Summar Code Documantation
 
 |Project|Deep Learning Frameworks|
 |---|---
-|Author|Author
+|Author|DUNBUJODA
 
 ****
 
