@@ -1,16 +1,9 @@
 DeepLearning_Summar Code Documantation
 ===========================
-<div>
-<table style="margin:auto">
-  <tr>
-    <th>Project</th>
-    <th>Deep Learning Frameworks</th>
-  </tr>
-  <tr>
-    <td>Author</td>
-    <td>DUNBUJODA</td>
-  </tr>
-</div>
+
+|Project|Deep Learning Frameworks|
+|---|---
+|Author|Author
 
 ****
 
