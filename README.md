@@ -1,9 +1,5 @@
 DeepLearning_Summar Code Documantation
 ===========================
-该文件为本工程的说明文档。本工程不调用框架地完成了LR，MLP和CNN网络，并用多分类和二分类网络实验。
-<div align=center><img height="350" src="figure1.png"/></div>
-    
-****
 <div>
 <table style="margin:auto">
   <tr>
@@ -17,6 +13,10 @@ DeepLearning_Summar Code Documantation
 </div>
 
 ****
+
+该文件为本工程的说明文档。本工程不调用框架地完成了LR，MLP和CNN网络，并用多分类和二分类网络实验。
+<div align=center><img height="350" src="figure1.png"/></div>
+
 ## 目录
 * [lr.py](#lr.py)
 * [MLP_MNIST.py](#MLP_MNIST.py)
