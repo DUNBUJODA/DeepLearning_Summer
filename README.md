@@ -4,7 +4,7 @@ DeepLearning_Summar Code Documantation
 <div align=center><img height="350" src="figure1.png"/></div>
     
 <center>
-<table>
+<table style="margin:auto">
   <tr>
     <th>Project</th>
     <th>Deep Learning Frameworks</th>
