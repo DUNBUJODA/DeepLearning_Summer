@@ -72,11 +72,119 @@ model.train(train_set_x, train_set_y, valid_set_x, valid_set_y, test_set_x, test
 
 MLP_basketball.py
 -----
+```
+class HiddenLayer(object):  # hidden layers
+    def __init__(self, input_size, output_size, learning_rate, activator, L2_reg, rng: np.random.RandomState = None)
+    def forward(self, X)
+    def backward(self, W_lplus1, delta_lplus1)
+    def upgrade(self)
+```
+```
+class OutputLayer():
+    def __init__(self, input_size, output_size, learning_rate, L2_reg, rng: np.random.RandomState = None)
+    def softmax(self, pred)
+    def forward(self, X)
+    def backward(self, Y)
+    def upgrade(self)
+```
+```
+class MLP(object):
+    def __init__(self, input_size: int, hidden_layers: list, output_size: int)
+    def propagate(self, X, Y, flag)
+    def backpropagate(self, X, Y)
+    def train(self, X_train, Y_train, X_val, Y_val, X_test, Y_test)
+    def save_weights(self)  # save the model
+    def load_weights(self)  # load the model
+    def propagate_ROC(self, thr, threshold, k)  # propagation of ROC curve
+    def draw_and_save_ROC(self, X, Y)  # calculate recall & FAR and then save it
+```
+
+train the model
+```
+model = MLP(input_size=train_set_x.shape[0], hidden_layers=[20, 8], output_size=2)
+# model.train(train_set_x, train_set_y, valid_set_x, valid_set_y, test_set_x, test_set_y)
+model.draw_and_save_ROC(test_set_x, test_set_y)
+```
 
 
 CNN_faster_mnist.py
 -----
-
+```
+class LeNetConvPoolLayer(object):
+    def __init__(self, rng, input_shape, filter_shape, f_strides, padding,
+    pooling, pooling_shape, p_strides, ignore_border,
+    activator, learning_rate, name: str, L2_reg: float):
+    def corr2d(self, X, W)
+    def split_max_pooling(self)
+    def concatenate_max_pooling(self, x)
+    def forward_fft(self, X)
+    def forward(self, X)
+    def create_mask(self, x)
+    def distribute(self, x, delta)
+    def backward_fft(self, para, delta_prev)
+    def backward(self, para, delta_prev)
+    def upgrade(self)
+```
+```
+class CNN(object):
+    def __init__(self, convs:list, hiddens:list, output:OutputLayer, batch_size, epochs)
+    def propagate(self, X, Y, flag)
+    def backpropagate(self, X, Y)
+    def train(self, X_train, Y_train, X_val, Y_val)
+    def save_weights(self)
+    def load_weights(self)
+    def propagate_ROC(self, thr, threshold, k)
+    def draw_and_save_ROC(self, X, Y)
+    
+```
+functions
+```
+def build_model()  # define the architecture of CNN
+```
+train the model
+```
+convs, hiddens, op, batch_size, epochs = build_model()
+model = CNN(convs=convs, hiddens=hiddens, output=op, batch_size=batch_size, epochs=epochs)
+model.train(train_set_x, train_set_y, valid_set_x, valid_set_y)
+```
 
 CNN_faster_basketball.py
 -----
+```
+class LeNetConvPoolLayer(object):
+    def __init__(self, rng, input_shape, filter_shape, f_strides, padding,
+    pooling, pooling_shape, p_strides, ignore_border,
+    activator, learning_rate, name: str, L2_reg: float):
+    def corr2d(self, X, W)
+    def split_max_pooling(self)
+    def concatenate_max_pooling(self, x)
+    def forward_fft(self, X)
+    def forward(self, X)
+    def create_mask(self, x)
+    def distribute(self, x, delta)
+    def backward_fft(self, para, delta_prev)
+    def backward(self, para, delta_prev)
+    def upgrade(self)
+```
+```
+class CNN(object):
+    def __init__(self, convs:list, hiddens:list, output:OutputLayer, batch_size, epochs)
+    def propagate(self, X, Y, flag)
+    def backpropagate(self, X, Y)
+    def train(self, X_train, Y_train, X_val, Y_val)
+    def save_weights(self)
+    def load_weights(self)
+    def propagate_ROC(self, thr, threshold, k)
+    def draw_and_save_ROC(self, X, Y)
+    
+```
+functions
+```
+def build_model()  # define the architecture of CNN
+```
+train the model
+```
+convs, hiddens, op, batch_size, epochs = build_model()
+model = CNN(convs=convs, hiddens=hiddens, output=op, batch_size=batch_size, epochs=epochs)
+model.train(train_set_x, train_set_y, valid_set_x, valid_set_y)
+```
