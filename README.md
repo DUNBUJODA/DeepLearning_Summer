@@ -1,14 +1,21 @@
 DeepLearning_Summar Code Documantation
 ===========================
 该文件为本工程的说明文档。本工程不调用框架地完成了LR，MLP和CNN网络，并用多分类和二分类网络实验。
-<div align=center><img height="300" src="figure1.png"/></div>
+<div align=center><img height="350" src="figure1.png"/></div>
 
 ****
     
 <div align=center>
-|Project|Deep Learning Frameworks|
-|---|---
-|Author|DUNBUJODA
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Deep Learning Frameworks</th>
+  </tr>
+  <tr>
+    <td>Author</td>
+    <td>DUNBUJODA</td>
+  </tr>
+</table>
 </div>
 
 ****
