@@ -3,7 +3,7 @@ DeepLearning_Summar Code Documantation
 该文件为本工程的说明文档。本工程不调用框架地完成了LR，MLP和CNN网络，并用多分类和二分类网络实验。
 <div align=center><img height="350" src="figure1.png"/></div>
     
-<div>
+
 <table border="1" align="center">
   <tr>
     <th>Project</th>
@@ -14,7 +14,6 @@ DeepLearning_Summar Code Documantation
     <td>DUNBUJODA</td>
   </tr>
 </table>
-</div>
 
 ****
 ## 目录
