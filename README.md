@@ -1,6 +1,7 @@
 DeepLearning_Summar Code Documantation
 ===========================
-该文件为本工程的说明文档
+该文件为本工程的说明文档。本工程不调用框架地完成了LR，MLP和CNN网络，并用多分类和二分类网络实验。
+<div align=center><img width="150" height="150" src="figure1.png"/></div>
 
 ****
     
@@ -19,6 +20,7 @@ DeepLearning_Summar Code Documantation
 
 lr.py
 -----
+实现LR框架，并完成多分类和二分类任务。
 ```
 class Model:
     def __init__(self, dim):  # parameters
@@ -40,6 +42,7 @@ model.train(X_train, Y_train, X_val, Y_val, X_test, Y_test, dir)
 
 MLP_MNIST.py
 -----
+实现MLP框架，并完成MNIST的多分类任务。实验结果与theano框架相同。
 ```
 class HiddenLayer(object):  # hidden layers
     def __init__(self, input_size, output_size, learning_rate, activator, L2_reg, rng: np.random.RandomState = None)
@@ -72,6 +75,7 @@ model.train(train_set_x, train_set_y, valid_set_x, valid_set_y, test_set_x, test
 
 MLP_basketball.py
 -----
+实现MLP框架，并完成篮球数据集的二分类任务。实验结果与theano框架相同。
 ```
 class HiddenLayer(object):  # hidden layers
     def __init__(self, input_size, output_size, learning_rate, activator, L2_reg, rng: np.random.RandomState = None)
@@ -109,6 +113,7 @@ model.draw_and_save_ROC(test_set_x, test_set_y)
 
 CNN_faster_mnist.py
 -----
+实现CNN框架，并完成MNIST的多分类任务。CNN用fft加速。
 ```
 class LeNetConvPoolLayer(object):
     def __init__(self, rng, input_shape, filter_shape, f_strides, padding,
@@ -150,6 +155,7 @@ model.train(train_set_x, train_set_y, valid_set_x, valid_set_y)
 
 CNN_faster_basketball.py
 -----
+实现CNN框架，并完成篮球数据集的二分类任务。CNN用fft加速。
 ```
 class LeNetConvPoolLayer(object):
     def __init__(self, rng, input_shape, filter_shape, f_strides, padding,
