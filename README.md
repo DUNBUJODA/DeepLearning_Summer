@@ -21,7 +21,7 @@ lr.py
 -----
 实现LR框架，并完成多分类和二分类任务。
 ```
-class Model:
+class Model:  # 线性感知单元
     def __init__(self, dim):  # parameters
     def sigmoid(self, z)  # activator
     def propagate(self, X, Y, flag)  # forward propagation
@@ -43,14 +43,14 @@ MLP_MNIST.py
 -----
 实现MLP框架，并完成MNIST的多分类任务。实验结果与theano框架相同。
 ```
-class HiddenLayer(object):  # hidden layers
+class HiddenLayer(object):  # 隐藏层
     def __init__(self, input_size, output_size, learning_rate, activator, L2_reg, rng: np.random.RandomState = None)
     def forward(self, X)
     def backward(self, W_lplus1, delta_lplus1)
     def upgrade(self)
 ```
 ```
-class OutputLayer():
+class OutputLayer():  # 输出层
     def __init__(self, input_size, output_size, learning_rate, L2_reg, rng: np.random.RandomState = None)
     def softmax(self, pred)
     def forward(self, X)
@@ -58,7 +58,7 @@ class OutputLayer():
     def upgrade(self)
 ```
 ```
-class MLP(object):
+class MLP(object):  # MLP模型
     def __init__(self, input_size: int, hidden_layers: list, output_size: int)
     def propagate(self, X, Y, flag)
     def backpropagate(self, X, Y)
@@ -76,14 +76,14 @@ MLP_basketball.py
 -----
 实现MLP框架，并完成篮球数据集的二分类任务。实验结果与theano框架相同。
 ```
-class HiddenLayer(object):  # hidden layers
+class HiddenLayer(object):  # 隐藏层
     def __init__(self, input_size, output_size, learning_rate, activator, L2_reg, rng: np.random.RandomState = None)
     def forward(self, X)
     def backward(self, W_lplus1, delta_lplus1)
     def upgrade(self)
 ```
 ```
-class OutputLayer():
+class OutputLayer():  # 输出层
     def __init__(self, input_size, output_size, learning_rate, L2_reg, rng: np.random.RandomState = None)
     def softmax(self, pred)
     def forward(self, X)
@@ -91,7 +91,7 @@ class OutputLayer():
     def upgrade(self)
 ```
 ```
-class MLP(object):
+class MLP(object):  # MLP模型
     def __init__(self, input_size: int, hidden_layers: list, output_size: int)
     def propagate(self, X, Y, flag)
     def backpropagate(self, X, Y)
@@ -105,8 +105,8 @@ class MLP(object):
 train the model
 ```
 model = MLP(input_size=train_set_x.shape[0], hidden_layers=[20, 8], output_size=2)
-# model.train(train_set_x, train_set_y, valid_set_x, valid_set_y, test_set_x, test_set_y)
-model.draw_and_save_ROC(test_set_x, test_set_y)
+model.train(train_set_x, train_set_y, valid_set_x, valid_set_y, test_set_x, test_set_y)
+# model.draw_and_save_ROC(test_set_x, test_set_y)
 ```
 
 
@@ -114,7 +114,7 @@ CNN_faster_mnist.py
 -----
 实现CNN框架，并完成MNIST的多分类任务。CNN用fft加速。
 ```
-class LeNetConvPoolLayer(object):
+class LeNetConvPoolLayer(object):  # 卷积层（包括最后的全联接层）
     def __init__(self, rng, input_shape, filter_shape, f_strides, padding,
     pooling, pooling_shape, p_strides, ignore_border,
     activator, learning_rate, name: str, L2_reg: float):
@@ -130,7 +130,7 @@ class LeNetConvPoolLayer(object):
     def upgrade(self)
 ```
 ```
-class CNN(object):
+class CNN(object):  # CNN模型
     def __init__(self, convs:list, hiddens:list, output:OutputLayer, batch_size, epochs)
     def propagate(self, X, Y, flag)
     def backpropagate(self, X, Y)
@@ -156,7 +156,7 @@ CNN_faster_basketball.py
 -----
 实现CNN框架，并完成篮球数据集的二分类任务。CNN用fft加速。
 ```
-class LeNetConvPoolLayer(object):
+class LeNetConvPoolLayer(object): # 卷积层（包括最后的全联接层）
     def __init__(self, rng, input_shape, filter_shape, f_strides, padding,
     pooling, pooling_shape, p_strides, ignore_border,
     activator, learning_rate, name: str, L2_reg: float):
@@ -172,7 +172,7 @@ class LeNetConvPoolLayer(object):
     def upgrade(self)
 ```
 ```
-class CNN(object):
+class CNN(object):  # CNN模型
     def __init__(self, convs:list, hiddens:list, output:OutputLayer, batch_size, epochs)
     def propagate(self, X, Y, flag)
     def backpropagate(self, X, Y)
