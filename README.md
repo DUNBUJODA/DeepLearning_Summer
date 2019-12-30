@@ -11,13 +11,13 @@ DeepLearning_Summar Code Documantation
 <div align=center><img height="350" src="figure1.png"/></div>
 
 ## 目录
-* [lr.py](lr.py)
+* [lr.py](#lr.py)
 * [MLP_MNIST.py](#MLP_MNIST.py)
 * [MLP_basketball.py](#MLP_basketball.py)
 * [CNN_faster_mnist.py](#CNN_faster_mnist.py)
 * [CNN_faster_basketball.py](#CNN_faster_basketball.py)
 
-lr.py
+#lr.py
 -----
 实现LR框架，并完成多分类和二分类任务。
 ```
