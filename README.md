@@ -12,7 +12,7 @@ DeepLearning_Summer
 
 ## 目录
 * [lr.py](#lrpy)
-* [MLP_MNIST.py](#MLPMNISTpy)
+* [MLP_MNIST.py](#MLP-MNISTpy)
 * [MLP_basketball.py](#MLP_basketball.py)
 * [CNN_faster_mnist.py](#CNN_faster_mnist.py)
 * [CNN_faster_basketball.py](#CNN_faster_basketball.py)
