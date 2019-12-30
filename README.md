@@ -1,4 +1,4 @@
-DeepLearning_Summar Code Documantation
+Code Documantation
 ===========================
 
 |Project|Deep Learning Frameworks|
@@ -17,7 +17,7 @@ DeepLearning_Summar Code Documantation
 * [CNN_faster_mnist.py](#CNN_faster_mnist.py)
 * [CNN_faster_basketball.py](#CNN_faster_basketball.py)
 
-#lr.py
+lr.py
 -----
 实现LR框架，并完成多分类和二分类任务。
 ```
